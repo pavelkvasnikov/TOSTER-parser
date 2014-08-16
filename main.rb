@@ -27,6 +27,10 @@ answers.get_answers.each do |answer|
   print "AUTHOR = #{answer.author} \n"
   print "DESCR = #{answer.descr[0..15]}  \n"
   print "LIKES = #{answer.likes}  \n"
+  print "-- Comments = \n"
+  answer.comments.each do |c|
+    print " -------------- #{c.descr}  \n"
+  end
   print "-------------------------------\n"
 
 end

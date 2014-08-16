@@ -1,3 +1,5 @@
+require_relative 'User'
+
 class UserPage
   @users_url = 'http://toster.ru/users/main?page='
   class << self

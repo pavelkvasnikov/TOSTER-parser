@@ -62,4 +62,8 @@ class QuestionPage
     end
     answers_comments
   end
+
+  def get_date
+
+  end
 end

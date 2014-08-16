@@ -9,7 +9,7 @@ class UserPage
     @page_id = page_id
     @user_agent = user_agent
     @cookie = cookie
-    @page = Nokogiri::HTML(open(UserPage.users_url+@page_id.to_s, {'User-Agent' => @user_agent, 'Cookie' => @cookie}) )
+    @page = Nokogiri::HTML(open(UserPage.users_url+@page_id.to_s, {'User-Agent' => @user_agent||'', 'Cookie' => @cookie||''}) )
     @users = []
   end
 

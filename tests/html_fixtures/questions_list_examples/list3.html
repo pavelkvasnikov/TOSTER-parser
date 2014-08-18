@@ -1,0 +1,2881 @@
+
+<!doctype html>
+<html>
+<head>
+    <base href="http://toster.ru/">
+    <meta charset='UTF-8'>
+    <title>Интересные &mdash; Вопросы &mdash; Toster.ru</title>  <meta property="og:title" content="Вопросы Toster.ru">
+    <meta property="og:description" content="Вопросы сервиса вопросов и ответов по IT-тематике Toster.ru.">
+    <meta property="og:url" content="http://toster.ru/questions/interesting?page=15">
+    <meta property="og:image" content="http://toster.ru/images/toster_share.png">
+    <meta property="og:site_name" content="«Тостер» — вопросы и ответы">
+    <meta property="og:type" content="website">
+    <meta property="og:keywords" content="Тостер, вопросы, ответы, ИТ, информационные технологии, toster, toster.ru, IT">
+    <meta content="320" name="MobileOptimized">
+    <meta content="width=1130" name="viewport">
+    <meta name="google-site-verification" content="bxG8AwWFunMfBQfqz1KstLUNY-aQmQvjjN85b87Y25g" />
+    <meta name='yandex-verification' content='556b759af57efeb5' />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="http://toster.ru/images/toster_share.png" rel="image_src">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&amp;subset=latin,cyrillic">
+    <link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/default.min.css">
+    <link rel="stylesheet" href="frontend.75558ccf-c554-4df1-8ce5-e43696ea2e2c.css">
+
+
+    <script src="js/lib/adriver.core.2.js"></script>
+
+    <script>
+        var pp_gemius_identifier = new String('B3A6seNJU_plPXHtBfqra4ZRHZcFfMdJgo1GWpMVD4X.67');
+    </script>
+
+    <script type='text/javascript'> var crtg_nid="2580";    var crtg_cookiename="cto_rtt";  var crtg_varname="crtg_content";    function crtg_getCookie(c_name){    var i,x,y,ARRCookies=document.cookie.split(";");    for(i=0;i<ARRCookies.length;i++){   x=ARRCookies[i].substr(0,ARRCookies[i].indexOf("="));   y=ARRCookies[i].substr(ARRCookies[i].indexOf("=")+1);   x=x.replace(/^\s+|\s+$/g,"");   if(x==c_name){return unescape(y);}  }   return'';   }   var crtg_content = crtg_getCookie(crtg_cookiename);var crtg_rnd=Math.floor(Math.random()*99999999999);  var crtg_url=location.protocol+'//rtax.criteo.com/delivery/rta/rta.js?netId='+escape(crtg_nid);crtg_url+='&cookieName='+escape(crtg_cookiename);crtg_url+='&rnd='+crtg_rnd;crtg_url+='&varName=' + escape(crtg_varname);    var crtg_script=document.createElement('script');crtg_script.type='text/javascript';crtg_script.src=crtg_url;crtg_script.async=true;    if(document.getElementsByTagName("head").length>0)document.getElementsByTagName("head")[0].appendChild(crtg_script);    else    if(document.getElementsByTagName("body").length>0)document.getElementsByTagName("body")[0].appendChild(crtg_script);    </script>
+</head>
+
+
+<body>
+<div class="layout_wrapper">
+<div class="sidebar" id="left_sidebar">
+
+
+    <div class="navbar">
+        <a href="http://toster.ru/" class="logo"></a>
+        <a href="#top" class="scroll_to_top for_guest hidden" title="Перемотать страницу наверх"></a>
+        <div class="tabs ">
+            <a href="#menu" class="tab"><div class="feed"></div></a>
+
+        </div>
+        <div class="footer_tabs tabs">
+            <a href="auth/ac?ret=@referer" class="tab link"><div class="auth"></div></a>
+        </div>
+    </div>
+
+    <div class="tab_contents">
+        <div class="tab_content" id="menu">
+            <div class="title">Разделы</div>
+            <div class="menu">
+                <a href="questions" class="item questions" data-menu="questions">Вопросы</a>
+                <a href="users" class="item users" data-menu="users">Пользователи</a>
+                <a href="tags" class="item tags" data-menu="tags">Теги</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="content with_sidebar">
+
+<div class="header">
+    <div class="left_column"><form action="search" class="header_search_form" method="get" id="header_search_form">
+        <div class="inner">
+            <input type="text" autocomplete="off" name="q" placeholder="Найти вопрос, ответ, тег или пользователя" />
+            <div class="icon"></div>
+        </div>
+    </form>
+    </div>
+    <div class="right_column"><div class="header_add_question">
+        <a href="question/new">Задать вопрос</a>
+    </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="notice_placeholder"></div>
+
+<div class="main_content">
+<div class="left_column ">
+<div class="inner">
+
+<a name="questions" id="amenu"></a>
+
+<div class="page_title">Вопросы</div>
+<div class="page_line"></div>
+
+
+<div class="tabs">
+    <a href="questions/latest" class="tab">Новые</a>
+    <a href="questions/interesting" class="tab open">Интересные</a>
+    <a href="questions/without_answer" class="tab">Без ответа</a>
+    <a href="questions/tmp" class="tab" style="text-transform:none">/tmp</a>
+</div>
+<div class="questions_list shortcuts_items">
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_13891"
+          title="54 пользователя подписались на вопрос
+"
+          class="question_interest_link" >
+    54</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/13891">Хорошие, впечатляющие книги о приемах программирования</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/13891#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                9 ответов        </a>
+
+            <div class="views" title="Количество просмотров вопроса">716</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/RockmanLeto">RockmanLeto</a>
+            </div>
+
+            <div class="date update_date" title="Дата редактирования вопроса">23.12.2011, в 22:49</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_152413">
+                <a href="http://toster.ru/tag/книги"   >книги</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/книги">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/63a/a22/63f/63aa2263f2e0475b8b6f6bc33f4ef33e.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/книги">книги</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/книги/questions" class="tag__counter icon_questions" title="Вопросы">467</a>
+                                    <a href="http://toster.ru/tag/книги/users" class="tag__counter icon_subscribers" title="Подписчики">11068</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_152707">
+                <a href="http://toster.ru/tag/программирование"   >программирование</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/программирование">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/964/953/80f/96495380f6d9484792ec05815386d0e2.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/программирование">программирование</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/программирование/questions" class="tag__counter icon_questions" title="Вопросы">2095</a>
+                                    <a href="http://toster.ru/tag/программирование/users" class="tag__counter icon_subscribers" title="Подписчики">14782</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_1355"
+          title="17 пользователей подписались на вопрос
+"
+          class="question_interest_link" >
+    17</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/1355">Изучение основ программирования (алгоритмы, структуры данных...)</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/1355#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                3 ответа        </a>
+
+            <div class="views" title="Количество просмотров вопроса">4286</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/sintez">sintez</a>
+            </div>
+
+            <div class="date update_date" title="Дата редактирования вопроса">22.10.2010, в 18:13</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_152707">
+                <a href="http://toster.ru/tag/программирование"   >программирование</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/программирование">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/964/953/80f/96495380f6d9484792ec05815386d0e2.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/программирование">программирование</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/программирование/questions" class="tag__counter icon_questions" title="Вопросы">2095</a>
+                                    <a href="http://toster.ru/tag/программирование/users" class="tag__counter icon_subscribers" title="Подписчики">14782</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_156225">
+                <a href="http://toster.ru/tag/алгоритмы"   >алгоритмы</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/алгоритмы">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/2c6/bd2/1f7/2c6bd21f7a984f22b1b7fffc6e4ae810.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/алгоритмы">алгоритмы</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/алгоритмы/questions" class="tag__counter icon_questions" title="Вопросы">614</a>
+                                    <a href="http://toster.ru/tag/алгоритмы/users" class="tag__counter icon_subscribers" title="Подписчики">13286</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_158509">
+                <a href="http://toster.ru/tag/структуры данных"   >структуры данных</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/структуры данных">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/структуры данных">структуры данных</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/структуры данных/questions" class="tag__counter icon_questions" title="Вопросы">49</a>
+                                    <a href="http://toster.ru/tag/структуры данных/users" class="tag__counter icon_subscribers" title="Подписчики">47</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_12819"
+          title="23 пользователя подписались на вопрос
+"
+          class="question_interest_link" >
+    23</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/12819">Регистрация своей фирмы</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/12819#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                6 ответов        </a>
+
+            <div class="views" title="Количество просмотров вопроса">1267</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/PhaoBao">PhaoBao</a>
+            </div>
+
+            <div class="date update_date" title="Дата редактирования вопроса">29.10.2011, в 12:16</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_154384">
+                <a href="http://toster.ru/tag/бизнес"   >бизнес</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/бизнес">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/бизнес">бизнес</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/бизнес/questions" class="tag__counter icon_questions" title="Вопросы">150</a>
+                                    <a href="http://toster.ru/tag/бизнес/users" class="tag__counter icon_subscribers" title="Подписчики">166</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_165075">
+                <a href="http://toster.ru/tag/ооо"   >ооо</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/ооо">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/ооо">ооо</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/ооо/questions" class="tag__counter icon_questions" title="Вопросы">15</a>
+                                    <a href="http://toster.ru/tag/ооо/users" class="tag__counter icon_subscribers" title="Подписчики">17</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_169702">
+                <a href="http://toster.ru/tag/опыт"   >опыт</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/опыт">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/опыт">опыт</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/опыт/questions" class="tag__counter icon_questions" title="Вопросы">37</a>
+                                    <a href="http://toster.ru/tag/опыт/users" class="tag__counter icon_subscribers" title="Подписчики">36</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+<span id="question_interest_link_12611"
+      title="26 пользователей подписались на вопрос
+"
+      class="question_interest_link" >
+    26</span>
+
+<div class="info">
+<div class="title">
+    <a href="http://toster.ru/q/12611">Выбор движка для простого интернет-магазина</a>
+</div>
+
+<div class="meta">
+
+    <a href="http://toster.ru/q/12611#answers_list" class="answers_count" title="Количество ответов на вопрос">
+        11 ответов        </a>
+
+    <div class="views" title="Количество просмотров вопроса">12030</div>
+
+    <div class="author" title="Автор вопроса">
+        <a href="http://toster.ru/user/badlittleduck">badlittleduck</a>
+    </div>
+
+    <div class="date update_date" title="Дата редактирования вопроса">21.10.2011, в 12:26</div>
+
+    <div class="clear"></div>
+</div>
+
+<div class="tags">
+    <div  class="tag tooltip_top  tag_21">
+        <a href="http://toster.ru/tag/cms"   >cms</a>
+
+        <div class="tag_popup">
+            <div class="popup_inner">
+                <div class="tag-info tag_dropdown">
+                    <a class="tag-info__image_wrap" href="http://toster.ru/tag/cms">
+                        <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                    </a>
+
+                    <div class="tag-info__attributes">
+                        <a class="tag-info__name" href="http://toster.ru/tag/cms">cms</a>
+                        <div class="tag-info__meta">
+                            <a href="http://toster.ru/tag/cms/questions" class="tag__counter icon_questions" title="Вопросы">817</a>
+                            <a href="http://toster.ru/tag/cms/users" class="tag__counter icon_subscribers" title="Подписчики">10079</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div  class="tag tooltip_top  tag_314">
+        <a href="http://toster.ru/tag/drupal"   >drupal</a>
+
+        <div class="tag_popup">
+            <div class="popup_inner">
+                <div class="tag-info tag_dropdown">
+                    <a class="tag-info__image_wrap" href="http://toster.ru/tag/drupal">
+                        <img class="tag__image tag__image_bg" src="//habrastorage.org/files/343/b4c/630/343b4c6308fa455787c913e97e1f5dc5.png" width="50" />
+                    </a>
+
+                    <div class="tag-info__attributes">
+                        <a class="tag-info__name" href="http://toster.ru/tag/drupal">drupal</a>
+                        <div class="tag-info__meta">
+                            <a href="http://toster.ru/tag/drupal/questions" class="tag__counter icon_questions" title="Вопросы">236</a>
+                            <a href="http://toster.ru/tag/drupal/users" class="tag__counter icon_subscribers" title="Подписчики">8470</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div  class="tag tooltip_top  tag_17704">
+        <a href="http://toster.ru/tag/joomla"   >joomla</a>
+
+        <div class="tag_popup">
+            <div class="popup_inner">
+                <div class="tag-info tag_dropdown">
+                    <a class="tag-info__image_wrap" href="http://toster.ru/tag/joomla">
+                        <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                    </a>
+
+                    <div class="tag-info__attributes">
+                        <a class="tag-info__name" href="http://toster.ru/tag/joomla">joomla</a>
+                        <div class="tag-info__meta">
+                            <a href="http://toster.ru/tag/joomla/questions" class="tag__counter icon_questions" title="Вопросы">198</a>
+                            <a href="http://toster.ru/tag/joomla/users" class="tag__counter icon_subscribers" title="Подписчики">6017</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div  class="tag tooltip_top  tag_153965">
+        <a href="http://toster.ru/tag/движок"   >движок</a>
+
+        <div class="tag_popup">
+            <div class="popup_inner">
+                <div class="tag-info tag_dropdown">
+                    <a class="tag-info__image_wrap" href="http://toster.ru/tag/движок">
+                        <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                    </a>
+
+                    <div class="tag-info__attributes">
+                        <a class="tag-info__name" href="http://toster.ru/tag/движок">движок</a>
+                        <div class="tag-info__meta">
+                            <a href="http://toster.ru/tag/движок/questions" class="tag__counter icon_questions" title="Вопросы">84</a>
+                            <a href="http://toster.ru/tag/движок/users" class="tag__counter icon_subscribers" title="Подписчики">82</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div  class="tag tooltip_top  tag_160756">
+        <a href="http://toster.ru/tag/magento"   >magento</a>
+
+        <div class="tag_popup">
+            <div class="popup_inner">
+                <div class="tag-info tag_dropdown">
+                    <a class="tag-info__image_wrap" href="http://toster.ru/tag/magento">
+                        <img class="tag__image tag__image_bg" src="//habrastorage.org/files/da2/f68/40f/da2f6840f4004ebca8074c84b089c152.png" width="50" />
+                    </a>
+
+                    <div class="tag-info__attributes">
+                        <a class="tag-info__name" href="http://toster.ru/tag/magento">magento</a>
+                        <div class="tag-info__meta">
+                            <a href="http://toster.ru/tag/magento/questions" class="tag__counter icon_questions" title="Вопросы">37</a>
+                            <a href="http://toster.ru/tag/magento/users" class="tag__counter icon_subscribers" title="Подписчики">39</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div  class="tag tooltip_top  tag_171532">
+        <a href="http://toster.ru/tag/электронная коммерция"   >электронная коммерция</a>
+
+        <div class="tag_popup">
+            <div class="popup_inner">
+                <div class="tag-info tag_dropdown">
+                    <a class="tag-info__image_wrap" href="http://toster.ru/tag/электронная коммерция">
+                        <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                    </a>
+
+                    <div class="tag-info__attributes">
+                        <a class="tag-info__name" href="http://toster.ru/tag/электронная коммерция">электронная коммерция</a>
+                        <div class="tag-info__meta">
+                            <a href="http://toster.ru/tag/электронная коммерция/questions" class="tag__counter icon_questions" title="Вопросы">333</a>
+                            <a href="http://toster.ru/tag/электронная коммерция/users" class="tag__counter icon_subscribers" title="Подписчики">10817</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div  class="tag tooltip_top  tag_220599">
+        <a href="http://toster.ru/tag/oscommerce"   >oscommerce</a>
+
+        <div class="tag_popup">
+            <div class="popup_inner">
+                <div class="tag-info tag_dropdown">
+                    <a class="tag-info__image_wrap" href="http://toster.ru/tag/oscommerce">
+                        <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                    </a>
+
+                    <div class="tag-info__attributes">
+                        <a class="tag-info__name" href="http://toster.ru/tag/oscommerce">oscommerce</a>
+                        <div class="tag-info__meta">
+                            <a href="http://toster.ru/tag/oscommerce/questions" class="tag__counter icon_questions" title="Вопросы">1</a>
+                            <a href="http://toster.ru/tag/oscommerce/users" class="tag__counter icon_subscribers" title="Подписчики">1</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div  class="tag tooltip_top  tag_226163">
+        <a href="http://toster.ru/tag/интернет-магазины"   >интернет-магазины</a>
+
+        <div class="tag_popup">
+            <div class="popup_inner">
+                <div class="tag-info tag_dropdown">
+                    <a class="tag-info__image_wrap" href="http://toster.ru/tag/интернет-магазины">
+                        <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                    </a>
+
+                    <div class="tag-info__attributes">
+                        <a class="tag-info__name" href="http://toster.ru/tag/интернет-магазины">интернет-магазины</a>
+                        <div class="tag-info__meta">
+                            <a href="http://toster.ru/tag/интернет-магазины/questions" class="tag__counter icon_questions" title="Вопросы">409</a>
+                            <a href="http://toster.ru/tag/интернет-магазины/users" class="tag__counter icon_subscribers" title="Подписчики">459</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_12583"
+          title="6 пользователей подписались на вопрос
+"
+          class="question_interest_link" >
+    6</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/12583">Выбор системы виртуализации</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/12583#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                4 ответа        </a>
+
+            <div class="views" title="Количество просмотров вопроса">3964</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/abbaerro">abbaerro</a>
+            </div>
+
+            <div class="date update_date" title="Дата редактирования вопроса">12.11.2011, в 01:05</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_36">
+                <a href="http://toster.ru/tag/linux"   >linux</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/linux">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/542/d1d/04c/542d1d04c77f459a94ad01f8efab3d18.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/linux">linux</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/linux/questions" class="tag__counter icon_questions" title="Вопросы">3088</a>
+                                    <a href="http://toster.ru/tag/linux/users" class="tag__counter icon_subscribers" title="Подписчики">14777</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_154982">
+                <a href="http://toster.ru/tag/xen"   >xen</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/xen">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/xen">xen</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/xen/questions" class="tag__counter icon_questions" title="Вопросы">103</a>
+                                    <a href="http://toster.ru/tag/xen/users" class="tag__counter icon_subscribers" title="Подписчики">78</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_154983">
+                <a href="http://toster.ru/tag/виртуализация"   >виртуализация</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/виртуализация">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/виртуализация">виртуализация</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/виртуализация/questions" class="tag__counter icon_questions" title="Вопросы">197</a>
+                                    <a href="http://toster.ru/tag/виртуализация/users" class="tag__counter icon_subscribers" title="Подписчики">259</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_162161">
+                <a href="http://toster.ru/tag/hyper-v"   >hyper-v</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/hyper-v">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/hyper-v">hyper-v</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/hyper-v/questions" class="tag__counter icon_questions" title="Вопросы">73</a>
+                                    <a href="http://toster.ru/tag/hyper-v/users" class="tag__counter icon_subscribers" title="Подписчики">64</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_164188">
+                <a href="http://toster.ru/tag/esxi"   >esxi</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/esxi">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/esxi">esxi</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/esxi/questions" class="tag__counter icon_questions" title="Вопросы">64</a>
+                                    <a href="http://toster.ru/tag/esxi/users" class="tag__counter icon_subscribers" title="Подписчики">58</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_122097"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/122097">Как передать переменные из django в js?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/122097#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                1 ответ        </a>
+
+            <div class="views" title="Количество просмотров вопроса">22</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/Rrooom">Rrooom</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">59 минут назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_357">
+                <a href="http://toster.ru/tag/javascript"   >javascript</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/javascript">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/69b/dff/42b/69bdff42b7764722bc11aff85e29693d.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/javascript">javascript</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/javascript/questions" class="tag__counter icon_questions" title="Вопросы">4335</a>
+                                    <a href="http://toster.ru/tag/javascript/users" class="tag__counter icon_subscribers" title="Подписчики">14427</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_403">
+                <a href="http://toster.ru/tag/django"   >django</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/django">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/9ad/8e1/b0d/9ad8e1b0dbab49ea963aa85c45aca278.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/django">django</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/django/questions" class="tag__counter icon_questions" title="Вопросы">543</a>
+                                    <a href="http://toster.ru/tag/django/users" class="tag__counter icon_subscribers" title="Подписчики">8929</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_18109">
+                <a href="http://toster.ru/tag/angular.js"   >angular.js</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/angular.js">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/2b0/c4d/21b/2b0c4d21bd3e4e6992c9ac651cd66f5b.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/angular.js">angular.js</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/angular.js/questions" class="tag__counter icon_questions" title="Вопросы">273</a>
+                                    <a href="http://toster.ru/tag/angular.js/users" class="tag__counter icon_subscribers" title="Подписчики">1883</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_152707">
+                <a href="http://toster.ru/tag/программирование"   >программирование</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/программирование">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/964/953/80f/96495380f6d9484792ec05815386d0e2.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/программирование">программирование</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/программирование/questions" class="tag__counter icon_questions" title="Вопросы">2095</a>
+                                    <a href="http://toster.ru/tag/программирование/users" class="tag__counter icon_subscribers" title="Подписчики">14782</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_122091"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/122091">"Вечные" сессии на PHP. Выдержит ли сервер?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/122091#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                2 ответа        </a>
+
+            <div class="views" title="Количество просмотров вопроса">71</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/rimosevskij">rimosevskij</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">час назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_260">
+                <a href="http://toster.ru/tag/php"   >php</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/php">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/373/e8b/dd3/373e8bdd3cb644d3bbeba47d34d1876d.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/php">php</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/php/questions" class="tag__counter icon_questions" title="Вопросы">7047</a>
+                                    <a href="http://toster.ru/tag/php/users" class="tag__counter icon_subscribers" title="Подписчики">14607</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_17697">
+                <a href="http://toster.ru/tag/apache"   >apache</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/apache">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/f2f/7f8/973/f2f7f8973da242828275688764feda4e.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/apache">apache</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/apache/questions" class="tag__counter icon_questions" title="Вопросы">650</a>
+                                    <a href="http://toster.ru/tag/apache/users" class="tag__counter icon_subscribers" title="Подписчики">7139</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_153360">
+                <a href="http://toster.ru/tag/lamp"   >lamp</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/lamp">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/lamp">lamp</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/lamp/questions" class="tag__counter icon_questions" title="Вопросы">45</a>
+                                    <a href="http://toster.ru/tag/lamp/users" class="tag__counter icon_subscribers" title="Подписчики">38</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_230317">
+                <a href="http://toster.ru/tag/raspberry pi"   >raspberry pi</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/raspberry pi">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/0f6/69c/b41/0f669cb41ea043f0956d7e4e793a3907.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/raspberry pi">raspberry pi</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/raspberry pi/questions" class="tag__counter icon_questions" title="Вопросы">146</a>
+                                    <a href="http://toster.ru/tag/raspberry pi/users" class="tag__counter icon_subscribers" title="Подписчики">169</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_122083"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/122083">Как правильно писать триггер в Postgresql?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/122083#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                нет ответов        </a>
+
+            <div class="views" title="Количество просмотров вопроса">18</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/vasilij-t">vasilij-t</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">час назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_358">
+                <a href="http://toster.ru/tag/postgresql"   >postgresql</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/postgresql">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/a7c/1ef/f91/a7c1eff914a6426bb7c79642ac994b48.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/postgresql">postgresql</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/postgresql/questions" class="tag__counter icon_questions" title="Вопросы">232</a>
+                                    <a href="http://toster.ru/tag/postgresql/users" class="tag__counter icon_subscribers" title="Подписчики">9463</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_172050">
+                <a href="http://toster.ru/tag/trigger"   >trigger</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/trigger">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/trigger">trigger</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/trigger/questions" class="tag__counter icon_questions" title="Вопросы">6</a>
+                                    <a href="http://toster.ru/tag/trigger/users" class="tag__counter icon_subscribers" title="Подписчики">4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_122079"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/122079">Как настроить в IPsec автоматическую генерацию ключей с автоматическим обновлением?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/122079#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                нет ответов        </a>
+
+            <div class="views" title="Количество просмотров вопроса">11</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/georgiysoroka">georgiysoroka</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">2 часа назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_163451">
+                <a href="http://toster.ru/tag/ipsec"   >ipsec</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/ipsec">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/ipsec">ipsec</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/ipsec/questions" class="tag__counter icon_questions" title="Вопросы">37</a>
+                                    <a href="http://toster.ru/tag/ipsec/users" class="tag__counter icon_subscribers" title="Подписчики">27</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_122067"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/122067">Как понять что почему не загружается win8.1?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/122067#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                1 ответ        </a>
+
+            <div class="views" title="Количество просмотров вопроса">35</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/make_luv">make_luv</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">2 часа назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_155743">
+                <a href="http://toster.ru/tag/microsoft windows"   >microsoft windows</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/microsoft windows">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/f69/d3f/c0d/f69d3fc0d8104655944bdcdf1bbe92bb.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/microsoft windows">microsoft windows</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/microsoft windows/questions" class="tag__counter icon_questions" title="Вопросы">1354</a>
+                                    <a href="http://toster.ru/tag/microsoft windows/users" class="tag__counter icon_subscribers" title="Подписчики">1085</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_122017"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/122017">С чего начать изучение программирования графики?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/122017#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                3 ответа        </a>
+
+            <div class="views" title="Количество просмотров вопроса">115</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/pvh1502">pvh1502</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">9 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_152707">
+                <a href="http://toster.ru/tag/программирование"   >программирование</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/программирование">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/964/953/80f/96495380f6d9484792ec05815386d0e2.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/программирование">программирование</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/программирование/questions" class="tag__counter icon_questions" title="Вопросы">2095</a>
+                                    <a href="http://toster.ru/tag/программирование/users" class="tag__counter icon_subscribers" title="Подписчики">14782</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_152945">
+                <a href="http://toster.ru/tag/3d"   >3d</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/3d">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/c8d/98c/422/c8d98c4228ba481ebf0ee2c4ff2000fc.gif" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/3d">3d</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/3d/questions" class="tag__counter icon_questions" title="Вопросы">223</a>
+                                    <a href="http://toster.ru/tag/3d/users" class="tag__counter icon_subscribers" title="Подписчики">10648</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_156870">
+                <a href="http://toster.ru/tag/графика"   >графика</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/графика">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/графика">графика</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/графика/questions" class="tag__counter icon_questions" title="Вопросы">79</a>
+                                    <a href="http://toster.ru/tag/графика/users" class="tag__counter icon_subscribers" title="Подписчики">70</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_160863">
+                <a href="http://toster.ru/tag/студенты"   >студенты</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/студенты">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/студенты">студенты</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/студенты/questions" class="tag__counter icon_questions" title="Вопросы">36</a>
+                                    <a href="http://toster.ru/tag/студенты/users" class="tag__counter icon_subscribers" title="Подписчики">40</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_191936">
+                <a href="http://toster.ru/tag/векторная графика"   >векторная графика</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/векторная графика">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/векторная графика">векторная графика</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/векторная графика/questions" class="tag__counter icon_questions" title="Вопросы">28</a>
+                                    <a href="http://toster.ru/tag/векторная графика/users" class="tag__counter icon_subscribers" title="Подписчики">30</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_121983"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/121983">Какое железо выбрать для домашнего NAS?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/121983#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                3 ответа        </a>
+
+            <div class="views" title="Количество просмотров вопроса">87</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/TemaKrukovets">TemaKrukovets</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">14 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_6025">
+                <a href="http://toster.ru/tag/сделай сам"   >сделай сам</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/сделай сам">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/fcf/fe6/a7a/fcffe6a7a32e4a6a920c9c7f4609c461.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/сделай сам">сделай сам</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/сделай сам/questions" class="tag__counter icon_questions" title="Вопросы">539</a>
+                                    <a href="http://toster.ru/tag/сделай сам/users" class="tag__counter icon_subscribers" title="Подписчики">14532</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_154479">
+                <a href="http://toster.ru/tag/nas"   >nas</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/nas">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/nas">nas</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/nas/questions" class="tag__counter icon_questions" title="Вопросы">107</a>
+                                    <a href="http://toster.ru/tag/nas/users" class="tag__counter icon_subscribers" title="Подписчики">105</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_166713">
+                <a href="http://toster.ru/tag/сетевое оборудование"   >сетевое оборудование</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/сетевое оборудование">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/сетевое оборудование">сетевое оборудование</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/сетевое оборудование/questions" class="tag__counter icon_questions" title="Вопросы">46</a>
+                                    <a href="http://toster.ru/tag/сетевое оборудование/users" class="tag__counter icon_subscribers" title="Подписчики">51</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_121981"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/121981">Почему windows vista в vmware player долго устанавливается?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/121981#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                1 ответ        </a>
+
+            <div class="views" title="Количество просмотров вопроса">38</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/denexapp">denexapp</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">14 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_155743">
+                <a href="http://toster.ru/tag/microsoft windows"   >microsoft windows</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/microsoft windows">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/f69/d3f/c0d/f69d3fc0d8104655944bdcdf1bbe92bb.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/microsoft windows">microsoft windows</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/microsoft windows/questions" class="tag__counter icon_questions" title="Вопросы">1354</a>
+                                    <a href="http://toster.ru/tag/microsoft windows/users" class="tag__counter icon_subscribers" title="Подписчики">1085</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_156123">
+                <a href="http://toster.ru/tag/vmware"   >vmware</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/vmware">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/vmware">vmware</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/vmware/questions" class="tag__counter icon_questions" title="Вопросы">144</a>
+                                    <a href="http://toster.ru/tag/vmware/users" class="tag__counter icon_subscribers" title="Подписчики">153</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_246066">
+                <a href="http://toster.ru/tag/vmware player"   >vmware player</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/vmware player">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/vmware player">vmware player</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/vmware player/questions" class="tag__counter icon_questions" title="Вопросы">5</a>
+                                    <a href="http://toster.ru/tag/vmware player/users" class="tag__counter icon_subscribers" title="Подписчики">4</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_121969"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/121969">Аудио-плеер для сайта без указания source/play-list?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/121969#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                1 ответ        </a>
+
+            <div class="views" title="Количество просмотров вопроса">34</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/iLearner">iLearner</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">15 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_155193">
+                <a href="http://toster.ru/tag/аудио"   >аудио</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/аудио">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/01e/e87/fb3/01ee87fb3b4e4cf6841de82d5e01aced.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/аудио">аудио</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/аудио/questions" class="tag__counter icon_questions" title="Вопросы">417</a>
+                                    <a href="http://toster.ru/tag/аудио/users" class="tag__counter icon_subscribers" title="Подписчики">392</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_121967"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link has_solution" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <span class="has_solution"><span class="icon"></span><span class="solution">Решено</span></span>
+            <a href="http://toster.ru/q/121967">Сделать картинку растянутой на всю ширину и высоту окна, что бы при этом при скролле она осталась на том же месте??</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/121967#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                3 ответа        </a>
+
+            <div class="views" title="Количество просмотров вопроса">112</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/istasiik">istasiik</a>
+            </div>
+
+            <div class="date update_date" title="Дата редактирования вопроса">15 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_307">
+                <a href="http://toster.ru/tag/css"   >css</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/css">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/785/a04/11b/785a0411b0904c4a8d36741fc037b0bf.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/css">css</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/css/questions" class="tag__counter icon_questions" title="Вопросы">2244</a>
+                                    <a href="http://toster.ru/tag/css/users" class="tag__counter icon_subscribers" title="Подписчики">13793</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_152480">
+                <a href="http://toster.ru/tag/верстка"   >верстка</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/верстка">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/927/7f5/d2b/9277f5d2b1d24ee3bf1204d3c58e4994.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/верстка">верстка</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/верстка/questions" class="tag__counter icon_questions" title="Вопросы">1233</a>
+                                    <a href="http://toster.ru/tag/верстка/users" class="tag__counter icon_subscribers" title="Подписчики">1085</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_152627">
+                <a href="http://toster.ru/tag/html"   >html</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/html">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/c81/0af/7f9/c810af7f968147739fe1c5f69b3d8410.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/html">html</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/html/questions" class="tag__counter icon_questions" title="Вопросы">1740</a>
+                                    <a href="http://toster.ru/tag/html/users" class="tag__counter icon_subscribers" title="Подписчики">1488</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_175420">
+                <a href="http://toster.ru/tag/background"   >background</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/background">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/background">background</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/background/questions" class="tag__counter icon_questions" title="Вопросы">30</a>
+                                    <a href="http://toster.ru/tag/background/users" class="tag__counter icon_subscribers" title="Подписчики">27</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_121957"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/121957">Можно ли обойтись без global в функциях?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/121957#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                2 ответа        </a>
+
+            <div class="views" title="Количество просмотров вопроса">75</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/gotye">gotye</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">16 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_260">
+                <a href="http://toster.ru/tag/php"   >php</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/php">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/373/e8b/dd3/373e8bdd3cb644d3bbeba47d34d1876d.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/php">php</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/php/questions" class="tag__counter icon_questions" title="Вопросы">7047</a>
+                                    <a href="http://toster.ru/tag/php/users" class="tag__counter icon_subscribers" title="Подписчики">14607</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_121935"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/121935">На сколько хорошо поисковые системы индексируют single-page приложения?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/121935#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                1 ответ        </a>
+
+            <div class="views" title="Количество просмотров вопроса">69</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/hell0w0rd">hell0w0rd</a>
+            </div>
+
+            <div class="date update_date" title="Дата редактирования вопроса">16 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_7">
+                <a href="http://toster.ru/tag/google"   >google</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/google">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/5d6/5c7/c3a/5d65c7c3adb44fc4bd880d23f8dc877f.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/google">google</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/google/questions" class="tag__counter icon_questions" title="Вопросы">854</a>
+                                    <a href="http://toster.ru/tag/google/users" class="tag__counter icon_subscribers" title="Подписчики">15271</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_153465">
+                <a href="http://toster.ru/tag/яндекс"   >яндекс</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/яндекс">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/5c8/66f/fbf/5c866ffbf293454a9cf1f0171ec272c4.png" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/яндекс">яндекс</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/яндекс/questions" class="tag__counter icon_questions" title="Вопросы">287</a>
+                                    <a href="http://toster.ru/tag/яндекс/users" class="tag__counter icon_subscribers" title="Подписчики">11384</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_170891">
+                <a href="http://toster.ru/tag/индексация"   >индексация</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/индексация">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/индексация">индексация</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/индексация/questions" class="tag__counter icon_questions" title="Вопросы">42</a>
+                                    <a href="http://toster.ru/tag/индексация/users" class="tag__counter icon_subscribers" title="Подписчики">37</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_184904">
+                <a href="http://toster.ru/tag/rest"   >rest</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/rest">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/rest">rest</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/rest/questions" class="tag__counter icon_questions" title="Вопросы">91</a>
+                                    <a href="http://toster.ru/tag/rest/users" class="tag__counter icon_subscribers" title="Подписчики">65</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_121929"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/121929">RDP черзе OpenVPN mikrotik не конектит?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/121929#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                3 ответа        </a>
+
+            <div class="views" title="Количество просмотров вопроса">47</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/gromka">gromka</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">17 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_152530">
+                <a href="http://toster.ru/tag/openvpn"   >openvpn</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/openvpn">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/openvpn">openvpn</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/openvpn/questions" class="tag__counter icon_questions" title="Вопросы">128</a>
+                                    <a href="http://toster.ru/tag/openvpn/users" class="tag__counter icon_subscribers" title="Подписчики">133</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_156086">
+                <a href="http://toster.ru/tag/mikrotik"   >mikrotik</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/mikrotik">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/mikrotik">mikrotik</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/mikrotik/questions" class="tag__counter icon_questions" title="Вопросы">208</a>
+                                    <a href="http://toster.ru/tag/mikrotik/users" class="tag__counter icon_subscribers" title="Подписчики">171</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_175209">
+                <a href="http://toster.ru/tag/rdp"   >rdp</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/rdp">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/rdp">rdp</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/rdp/questions" class="tag__counter icon_questions" title="Вопросы">102</a>
+                                    <a href="http://toster.ru/tag/rdp/users" class="tag__counter icon_subscribers" title="Подписчики">96</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_121909"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/121909">Какие правила транслитерации у поисковых систем?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/121909#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                1 ответ        </a>
+
+            <div class="views" title="Количество просмотров вопроса">35</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/AndreyBerezhnoy">AndreyBerezhnoy</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">19 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_152639">
+                <a href="http://toster.ru/tag/поисковая оптимизация"   >поисковая оптимизация</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/поисковая оптимизация">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/205/b55/3c1/205b553c1f804caea520427ad559001a.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/поисковая оптимизация">поисковая оптимизация</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/поисковая оптимизация/questions" class="tag__counter icon_questions" title="Вопросы">519</a>
+                                    <a href="http://toster.ru/tag/поисковая оптимизация/users" class="tag__counter icon_subscribers" title="Подписчики">537</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div  class="tag tooltip_top  tag_156382">
+                <a href="http://toster.ru/tag/транслитерация"   >транслитерация</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/транслитерация">
+                                <img class="tag__image" src="/images/tag_default_d.png" width="50" height="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/транслитерация">транслитерация</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/транслитерация/questions" class="tag__counter icon_questions" title="Вопросы">6</a>
+                                    <a href="http://toster.ru/tag/транслитерация/users" class="tag__counter icon_subscribers" title="Подписчики">5</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+<div class="questions_list_item shortcuts_item">
+
+    <span id="question_interest_link_121899"
+          title="1 пользователь подписался на вопрос
+"
+          class="question_interest_link" >
+    1</span>
+
+    <div class="info">
+        <div class="title">
+            <a href="http://toster.ru/q/121899">Как правильно расшарить схему миграции и атрибутов моделей в Rails?</a>
+        </div>
+
+        <div class="meta">
+
+            <a href="http://toster.ru/q/121899#answers_list" class="answers_count" title="Количество ответов на вопрос">
+                1 ответ        </a>
+
+            <div class="views" title="Количество просмотров вопроса">43</div>
+
+            <div class="author" title="Автор вопроса">
+                <a href="http://toster.ru/user/Meridian312">Meridian312</a>
+            </div>
+
+            <div class="date" title="Дата публикации вопроса">19 часов назад</div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="tags">
+            <div  class="tag tooltip_top  tag_152680">
+                <a href="http://toster.ru/tag/ruby on rails"   >ruby on rails</a>
+
+                <div class="tag_popup">
+                    <div class="popup_inner">
+                        <div class="tag-info tag_dropdown">
+                            <a class="tag-info__image_wrap" href="http://toster.ru/tag/ruby on rails">
+                                <img class="tag__image tag__image_bg" src="//habrastorage.org/files/bd4/454/ac0/bd4454ac071543399ee1b9a65afdd7e4.jpg" width="50" />
+                            </a>
+
+                            <div class="tag-info__attributes">
+                                <a class="tag-info__name" href="http://toster.ru/tag/ruby on rails">ruby on rails</a>
+                                <div class="tag-info__meta">
+                                    <a href="http://toster.ru/tag/ruby on rails/questions" class="tag__counter icon_questions" title="Вопросы">676</a>
+                                    <a href="http://toster.ru/tag/ruby on rails/users" class="tag__counter icon_subscribers" title="Подписчики">8892</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+
+    </div>
+    <div class="clear"></div>
+
+</div>
+</div>
+<div class="paginator">
+    <a href="http://toster.ru/questions/interesting?page=14" class="prev">&larr; Сюда</a>
+    <a href="http://toster.ru/questions/interesting?page=10">10</a>
+    <a href="http://toster.ru/questions/interesting?page=11">11</a>
+    <a href="http://toster.ru/questions/interesting?page=12">12</a>
+    <a href="http://toster.ru/questions/interesting?page=13">13</a>
+    <a href="http://toster.ru/questions/interesting?page=14">14</a>
+    <span class="current">15</span>
+    <a href="http://toster.ru/questions/interesting?page=16">16</a>
+    <a href="http://toster.ru/questions/interesting?page=17">17</a>
+    <a href="http://toster.ru/questions/interesting?page=18">18</a>
+    <a href="http://toster.ru/questions/interesting?page=19">19</a>
+    <a href="http://toster.ru/questions/interesting?page=20">20</a>
+    <a href="http://toster.ru/questions/interesting?page=16" class="next">Туда &rarr;</a>
+</div>
+</div>
+</div>
+<div class="right_column">
+<div class="inner">
+<div class="right_sidebar">
+<div class="block block_banner">
+    <!--  AdRiver code START. Type:AjaxJS Site: toster PZ: 0 BN: 5 -->
+    <div id="adriver_banner_973257705"></div>
+    <script type="text/javascript">
+        if (typeof adriver != 'undefined') {
+            new adriver("adriver_banner_973257705", {sid:195294, bt:52, bn:5});
+        }</script>
+    <!--  AdRiver code END  -->
+</div>
+
+<div class="block block_inner popular_tags">
+<div class="title">Популярные теги дня</div>
+
+<div class="tags">
+<div  class="tag tooltip_top  tag_260">
+    <a href="http://toster.ru/tag/php"   >php</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/php">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/373/e8b/dd3/373e8bdd3cb644d3bbeba47d34d1876d.png" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/php">php</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/php/questions" class="tag__counter icon_questions" title="Вопросы">7047</a>
+                        <a href="http://toster.ru/tag/php/users" class="tag__counter icon_subscribers" title="Подписчики">14607</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div  class="tag tooltip_top  tag_357">
+    <a href="http://toster.ru/tag/javascript"   >javascript</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/javascript">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/69b/dff/42b/69bdff42b7764722bc11aff85e29693d.png" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/javascript">javascript</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/javascript/questions" class="tag__counter icon_questions" title="Вопросы">4335</a>
+                        <a href="http://toster.ru/tag/javascript/users" class="tag__counter icon_subscribers" title="Подписчики">14427</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div  class="tag tooltip_top  tag_155743">
+    <a href="http://toster.ru/tag/microsoft windows"   >microsoft windows</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/microsoft windows">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/f69/d3f/c0d/f69d3fc0d8104655944bdcdf1bbe92bb.jpg" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/microsoft windows">microsoft windows</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/microsoft windows/questions" class="tag__counter icon_questions" title="Вопросы">1354</a>
+                        <a href="http://toster.ru/tag/microsoft windows/users" class="tag__counter icon_subscribers" title="Подписчики">1085</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div  class="tag tooltip_top  tag_36">
+    <a href="http://toster.ru/tag/linux"   >linux</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/linux">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/542/d1d/04c/542d1d04c77f459a94ad01f8efab3d18.jpg" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/linux">linux</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/linux/questions" class="tag__counter icon_questions" title="Вопросы">3088</a>
+                        <a href="http://toster.ru/tag/linux/users" class="tag__counter icon_subscribers" title="Подписчики">14777</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div  class="tag tooltip_top  tag_307">
+    <a href="http://toster.ru/tag/css"   >css</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/css">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/785/a04/11b/785a0411b0904c4a8d36741fc037b0bf.jpg" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/css">css</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/css/questions" class="tag__counter icon_questions" title="Вопросы">2244</a>
+                        <a href="http://toster.ru/tag/css/users" class="tag__counter icon_subscribers" title="Подписчики">13793</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div  class="tag tooltip_top  tag_159717">
+    <a href="http://toster.ru/tag/c%23"   >c#</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/c%23">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/d88/415/729/d88415729389494da7c46a8587b316ca.png" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/c%23">c#</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/c%23/questions" class="tag__counter icon_questions" title="Вопросы">999</a>
+                        <a href="http://toster.ru/tag/c%23/users" class="tag__counter icon_subscribers" title="Подписчики">7497</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div  class="tag tooltip_top  tag_405">
+    <a href="http://toster.ru/tag/android"   >android</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/android">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/742/891/ec6/742891ec6c4a4767bb7a8f36bfef90d8.png" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/android">android</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/android/questions" class="tag__counter icon_questions" title="Вопросы">2788</a>
+                        <a href="http://toster.ru/tag/android/users" class="tag__counter icon_subscribers" title="Подписчики">14819</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div  class="tag tooltip_top  tag_63">
+    <a href="http://toster.ru/tag/apple"   >apple</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/apple">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/508/e5d/b0f/508e5db0fcd24e05b62359a9bc8c2e88.jpg" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/apple">apple</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/apple/questions" class="tag__counter icon_questions" title="Вопросы">808</a>
+                        <a href="http://toster.ru/tag/apple/users" class="tag__counter icon_subscribers" title="Подписчики">12329</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div  class="tag tooltip_top  tag_152707">
+    <a href="http://toster.ru/tag/программирование"   >программирование</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/программирование">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/964/953/80f/96495380f6d9484792ec05815386d0e2.jpg" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/программирование">программирование</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/программирование/questions" class="tag__counter icon_questions" title="Вопросы">2095</a>
+                        <a href="http://toster.ru/tag/программирование/users" class="tag__counter icon_subscribers" title="Подписчики">14782</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div  class="tag tooltip_top  tag_7">
+    <a href="http://toster.ru/tag/google"   >google</a>
+
+    <div class="tag_popup">
+        <div class="popup_inner">
+            <div class="tag-info tag_dropdown">
+                <a class="tag-info__image_wrap" href="http://toster.ru/tag/google">
+                    <img class="tag__image tag__image_bg" src="//habrastorage.org/files/5d6/5c7/c3a/5d65c7c3adb44fc4bd880d23f8dc877f.png" width="50" />
+                </a>
+
+                <div class="tag-info__attributes">
+                    <a class="tag-info__name" href="http://toster.ru/tag/google">google</a>
+                    <div class="tag-info__meta">
+                        <a href="http://toster.ru/tag/google/questions" class="tag__counter icon_questions" title="Вопросы">854</a>
+                        <a href="http://toster.ru/tag/google/users" class="tag__counter icon_subscribers" title="Подписчики">15271</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+</div>
+<div class="block block_banner">
+    <!--  AdRiver code START. Type:AjaxJS Site: toster PZ: 0 BN: 1 -->
+    <div id="adriver_banner_679678228"></div>
+    <script type="text/javascript">
+        if (typeof adriver != 'undefined') {
+            keyword = (typeof crtg_content !== 'undefined' && crtg_content) ? crtg_content : '';
+            new adriver("adriver_banner_679678228", {sid:195294, bt:52, bn:1, keyword: keyword});
+        }</script>
+    <!--  AdRiver code END  -->
+</div>
+
+<div class="block block_inner questions_stream">
+    <div class="title">Популярные вопросы</div>
+    <div class="questions_stream_list">
+
+
+        <div class="questions_stream_list_item">
+            <div class="title">
+                <span class="has_solution" title="У вопроса есть решение"></span>
+                <a href="http://toster.ru/q/95401">Есть сервис для того, чтобы научиться бегло понимать английскую речь?</a>
+            </div>
+            <div class="meta">
+
+                <a href="http://toster.ru/q/95401" class="intresting" title="Количество человек, интересующихся вопросом" >156</a>
+                <a href="http://toster.ru/q/95401#answers_list" class="answers_count" title="Количество ответов на вопрос">21</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="questions_stream_list_item">
+            <div class="title">
+                <a href="http://toster.ru/q/122051">Как научиться зарабатывать на сайтах?</a>
+            </div>
+            <div class="meta">
+
+                <a href="http://toster.ru/q/122051" class="intresting" title="Количество человек, интересующихся вопросом" >4</a>
+                <a href="http://toster.ru/q/122051#answers_list" class="answers_count" title="Количество ответов на вопрос">2</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="questions_stream_list_item">
+            <div class="title">
+                <a href="http://toster.ru/q/122089">Есть ли сборник фраз и названий для интерфейсов?</a>
+            </div>
+            <div class="meta">
+
+                <a href="http://toster.ru/q/122089" class="intresting" title="Количество человек, интересующихся вопросом" >3</a>
+                <a href="http://toster.ru/q/122089#answers_list" class="answers_count" title="Количество ответов на вопрос">1</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="questions_stream_list_item">
+            <div class="title">
+                <span class="has_solution" title="У вопроса есть решение"></span>
+                <a href="http://toster.ru/q/118991">Есть ли в природе обширная книга по front end разработке?</a>
+            </div>
+            <div class="meta">
+
+                <a href="http://toster.ru/q/118991" class="intresting" title="Количество человек, интересующихся вопросом" >61</a>
+                <a href="http://toster.ru/q/118991#answers_list" class="answers_count" title="Количество ответов на вопрос">10</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="questions_stream_list_item">
+            <div class="title">
+                <span class="has_solution" title="У вопроса есть решение"></span>
+                <a href="http://toster.ru/q/117511">Что почитать о дизайне для разработчика?</a>
+            </div>
+            <div class="meta">
+
+                <a href="http://toster.ru/q/117511" class="intresting" title="Количество человек, интересующихся вопросом" >85</a>
+                <a href="http://toster.ru/q/117511#answers_list" class="answers_count" title="Количество ответов на вопрос">5</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="questions_stream_list_item">
+            <div class="title">
+                <a href="http://toster.ru/q/122069">Что с тостером на мобильных устройствах?</a>
+            </div>
+            <div class="meta">
+
+                <a href="http://toster.ru/q/122069" class="intresting" title="Количество человек, интересующихся вопросом" >2</a>
+                <a href="http://toster.ru/q/122069#answers_list" class="answers_count" title="Количество ответов на вопрос">2</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="questions_stream_list_item">
+            <div class="title">
+                <a href="http://toster.ru/q/122065">Как правильно настроить bgp over dmvpn?</a>
+            </div>
+            <div class="meta">
+
+                <a href="http://toster.ru/q/122065" class="intresting" title="Количество человек, интересующихся вопросом" >2</a>
+                <a href="http://toster.ru/q/122065#answers_list" class="answers_count" title="Количество ответов на вопрос">0</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="questions_stream_list_item">
+            <div class="title">
+                <a href="http://toster.ru/q/122061">Что актуально для для java ee ?</a>
+            </div>
+            <div class="meta">
+
+                <a href="http://toster.ru/q/122061" class="intresting" title="Количество человек, интересующихся вопросом" >2</a>
+                <a href="http://toster.ru/q/122061#answers_list" class="answers_count" title="Количество ответов на вопрос">2</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="block block_inner active_users">
+    <div class="title">Активные пользователи</div>
+    <div class="active_users_items">
+
+        <div class="active_users_item">
+            <a href="http://toster.ru/user/Petroveg" class="avatar"><img src="//habrastorage.org/files/5dd/bb0/86f/5ddbb086f5d547088b646f781a2d70d3.png" alt="">
+            </a>
+            <div class="info">
+                <div class="username">
+                    <div class="login"><a href="http://toster.ru/user/Petroveg">Petroveg</a></div>
+                </div>
+                <div class="meta">
+                    <div class="question_count" title="Количество вопросов за последнее время">0</div>
+                    <div class="answers_count" title="Количество ответов на вопросы за последнее время">37</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="active_users_item">
+            <a href="http://toster.ru/user/Fesor" class="avatar"><img src="//www.gravatar.com/avatar/7d36bab963d4eaf384e653b2ad2e1c16?d=wavatar&s=256">
+            </a>
+            <div class="info">
+                <div class="username">
+                    <div class="login"><a href="http://toster.ru/user/Fesor">Fesor</a></div>
+                </div>
+                <div class="meta">
+                    <div class="question_count" title="Количество вопросов за последнее время">0</div>
+                    <div class="answers_count" title="Количество ответов на вопросы за последнее время">34</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="active_users_item">
+            <a href="http://toster.ru/user/opium" class="avatar"><img src="//habrastorage.org/getpro/toster/avatars/d81/2c5/86d/d812c586d5d94b955a3d091cd8d8de86.jpg" alt="">
+            </a>
+            <div class="info">
+                <div class="username">
+                    <div class="login"><a href="http://toster.ru/user/opium">opium</a></div>
+                </div>
+                <div class="meta">
+                    <div class="question_count" title="Количество вопросов за последнее время">0</div>
+                    <div class="answers_count" title="Количество ответов на вопросы за последнее время">32</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="active_users_item">
+            <a href="http://toster.ru/user/RicoX" class="avatar"><img src="http://toster.ru/images/no_avatar.png" alt="">
+            </a>
+            <div class="info">
+                <div class="username">
+                    <div class="login"><a href="http://toster.ru/user/RicoX">RicoX</a></div>
+                </div>
+                <div class="meta">
+                    <div class="question_count" title="Количество вопросов за последнее время">0</div>
+                    <div class="answers_count" title="Количество ответов на вопросы за последнее время">29</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="active_users_item">
+            <a href="http://toster.ru/user/DonSinDRom" class="avatar"><img src="//www.gravatar.com/avatar/aefde1222f7493166f6526f164965cac?d=wavatar&s=256">
+            </a>
+            <div class="info">
+                <div class="username">
+                    <div class="login"><a href="http://toster.ru/user/DonSinDRom">DonSinDRom</a></div>
+                </div>
+                <div class="meta">
+                    <div class="question_count" title="Количество вопросов за последнее время">0</div>
+                    <div class="answers_count" title="Количество ответов на вопросы за последнее время">23</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="block block_inner hantim_vacancies">
+    <div class="title">Вакансии с <a href="http://brainstorage.me/?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo" target="_blank">Brainstorage</a></div>
+    <div class="vacancies">
+        <div class="vacancy  ">
+            <div class="company">
+                <a href="http://brainstorage.me/companies/hrspb-proservicecom?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">ProService</a>
+            </div>
+            <div class="title">
+                <a href="http://brainstorage.me/jobs/19615?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo"> Java Developer</a>
+            </div>
+        </div>
+        <div class="vacancy  ">
+            <div class="company">
+                <a href="http://brainstorage.me/companies/UpSolution?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">UpSolution</a>
+            </div>
+            <div class="title">
+                <a href="http://brainstorage.me/jobs/22051?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Support Manager for WordPress themes</a>
+            </div>
+        </div>
+        <div class="vacancy  ">
+            <div class="company">
+                <a href="http://brainstorage.me/companies/svtravel?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Связной Трэвел</a>
+            </div>
+            <div class="title">
+                <a href="http://brainstorage.me/jobs/21927?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Дизайнер-фрилансер</a>
+            </div>
+        </div>
+        <div class="vacancy  ">
+            <div class="company">
+                <a href="http://brainstorage.me/companies/wb?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Wildberries</a>
+            </div>
+            <div class="title">
+                <a href="http://brainstorage.me/jobs/22045?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Программист C#</a>
+            </div>
+        </div>
+        <div class="vacancy  ">
+            <div class="company">
+                <a href="http://brainstorage.me/companies/Isoluxlcc?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">ОАО "Изолюкс"</a>
+            </div>
+            <div class="title">
+                <a href="http://brainstorage.me/jobs/21949?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">PHP программист (1С Битрикс)</a>
+            </div>
+        </div>
+        <div class="vacancy  marked">
+            <div class="company">
+                <a href="http://brainstorage.me/companies/realto?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Realto</a>
+            </div>
+            <div class="title">
+                <a href="http://brainstorage.me/jobs/20179?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Разработчик Pytnon / Django</a>
+            </div>
+        </div>
+        <div class="vacancy  marked">
+            <div class="company">
+                <a href="http://brainstorage.me/companies/funactionme?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Funaction </a>
+            </div>
+            <div class="title">
+                <a href="http://brainstorage.me/jobs/22043?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Менеджер по SMM</a>
+            </div>
+        </div>
+        <div class="vacancy  marked">
+            <div class="company">
+                <a href="http://brainstorage.me/companies/Skyeng?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Skyeng</a>
+            </div>
+            <div class="title">
+                <a href="http://brainstorage.me/jobs/21283?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">PHP Senior Developer</a>
+            </div>
+        </div>
+        <div class="all"><a href="http://brainstorage.me/?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo"  target="_blank">Все вакансии</a></div>
+    </div>
+</div>
+<div class="block block_inner freelansim_tasks">
+    <div class="title">Заказы с <a href="http://freelansim.ru/?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo" target="_blank">Фрилансим</a></div>
+    <div class="tasks">
+        <div class="task ">
+            <a href="http://freelansim.ru/tasks/80375?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Первичное наполнение форума</a>
+        </div>
+        <div class="task ">
+            <a href="http://freelansim.ru/tasks/80373?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Дизайн сайта для интернет магазина мебели</a>
+        </div>
+        <div class="task ">
+            <a href="http://freelansim.ru/tasks/80369?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Программист 1С на доработку базы</a>
+        </div>
+        <div class="task ">
+            <a href="http://freelansim.ru/tasks/80367?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo"> Нужен javascript ООП программист (работа сдельная)</a>
+        </div>
+        <div class="task ">
+            <a href="http://freelansim.ru/tasks/80365?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Перенести контент и создать структуру сайта на битриксе</a>
+        </div>
+        <div class="task ">
+            <a href="http://freelansim.ru/tasks/80359?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Перевод обучающего курса по динамической имитации систем автоматизации</a>
+        </div>
+        <div class="task ">
+            <a href="http://freelansim.ru/tasks/80355?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">Тестирование сайта</a>
+        </div>
+        <div class="task ">
+            <a href="http://freelansim.ru/tasks/80351?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo">LP , 1 день на выполнение</a>
+        </div>
+        <div class="all">
+            <a href="http://freelansim.ru/?utm_source=tm_toster&utm_medium=tm_block&utm_campaign=tm_promo" target="_blank">Все заказы</a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="footer">
+    <div class="social">
+        <a href="https://twitter.com/toster_ru" class="tw" title="Наш аккаунт в Twitter"></a>
+        <a href="https://www.facebook.com/toster.ru" class="fb" title="Наша группа в Facebook"></a>
+        <a href="http://vk.com/toster_ru" class="vk" title="Наша группа на Вконтакте"></a>
+    </div>
+    <div class="copyright">&copy; <a href="http://tmtm.ru">TM</a></div>
+
+    <div class="menu">
+        <a href="info/about">О сайте</a>
+        <a href="http://habrahabr.ru/company/tm/">Блог</a>
+        <a href="info/agreement">Соглашение</a>
+        <a href="info/advertising">Реклама</a>
+        <a href="help">Помощь</a>
+        <a href="feedback">Обратная связь</a>
+    </div>
+</div>
+
+<div class="content_overlay"></div>
+
+</div>
+
+<script>
+    var global_notices = [];
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script src="frontend.75558ccf-c554-4df1-8ce5-e43696ea2e2c.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-726094-14', 'toster.ru');
+    ga('require', 'displayfeatures');
+    ga('set', 'dimension1', 'guest'); // user type - guest/authorized
+    ga('send', 'pageview');
+
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter24049246 = new Ya.Metrika({id:24049246,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/24049246" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!-- tns-counter.ru -->
+<script type="text/javascript">
+    (new Image()).src = '//www.tns-counter.ru/V13a***R>' + document.referrer.replace(/\*/g,'%2a') + '*tmtm_ru/ru/UTF-8/tmsec=toster_total/' + Math.round(Math.random()*1E9);
+</script>
+<noscript>
+    <img src="http://www.tns-counter.ru/V13a****tmtm_ru/ru/UTF-8/tmsec=toster_total/" width="1" height="1" alt="" />
+</noscript>
+<!--/ tns-counter.ru -->
+
+</body>
+</html>

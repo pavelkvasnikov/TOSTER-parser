@@ -43,26 +43,26 @@ class String
   end
 end
 
-user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
-cookie = 'toster_sid=j5bo0kc5kdilq54i6ul1em3335; _ga=GA1.2.1678308696.1403085862'
+# user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+# cookie = 'toster_sid=2uk03e20bfupr4e3ce0355mqj5; _ga=GA1.2.1678308696.1403085862; _dc=1; _ym_visorc_24049246=b'
+# urls = QuestionPageList.get_questions_ids(user_agent,cookie)
 
+exit 0
+urls.each do |q|
+ puts  QuestionPage.new(q,user_agent,cookie).get_question.created_at.to_s
+end
+exit 0
 question,answers = QuestionPage.new(121463,user_agent,cookie).get_all
-puts ('QUESTION AUTHOR = ')+question.user
+
 puts 'QUESTION DATE = '+question.created_at.to_s
-puts 'QUESTION DESCR = '+question.descr.strip.gsub(/\n/,' ')
-puts 'QUESTION TAGS = '+question.tags.join(' ')
+
 puts
 
 answers.each do |answer|
-  puts '    ANSWER AUTHOR = '+answer.author
-  puts '    ANSWER DESCR = '+answer.descr.strip.gsub(/\n/,' ')
   puts '    ANSWER DATE = '+answer.created_at.to_s
   puts
   answer.comments.each do |comment|
-       puts '        COMMENT AUTHOR = ' + comment.author
        puts '        COMMENT DATE = ' + comment.created_at.to_s
-       puts '        COMMENT DESCR = ' + comment.descr.strip.gsub(/\n/,"\n                        ")
-
        puts
     end
 end

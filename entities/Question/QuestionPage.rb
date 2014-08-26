@@ -1,7 +1,7 @@
 # Representation of page with question, may have some other entities
 require_relative 'Question'
 require_relative 'Answer'
-require_relative 'AnswerComment'
+require_relative 'Comment'
 
 class QuestionPage
   @questions_url = 'http://toster.ru/q/'
@@ -19,6 +19,7 @@ class QuestionPage
 
   def get_question
     tags=[]
+    comments = []
     @page.css('div.question_show div.info div.tags div.tag a[itemprop=articleSection]').each { |t| tags<<t.text }
     Question.new(
         title = @page.css('span[itemprop="name"]').text,
@@ -28,7 +29,8 @@ class QuestionPage
         user = @page.css('a[itemprop="name"]').text,
         views = @page.css('div.views')[0].text,
         comments_count = @page.css('a.add_clarification_link').text.strip.match(/[0-9]+/) || 0,
-        tags = tags
+        tags = tags,
+        comments = comments
     )
   end
 
@@ -59,10 +61,11 @@ class QuestionPage
     answers_comments = []
     answer.css('div.answer__body div.answer__feedback div div ul li').each do |c|
       answers_comments<<
-          AnswerComment.new(
+          Comment.new(
               c.css('div.comment__body div.comment__header div.comment__meta a.comment__username').text,
               c.css('div.comment__body div.comment__text').text,
-              c.css('div.comment__body div.comment__header div.comment__controls a.date').text.strip.parse_date
+              c.css('div.comment__body div.comment__header div.comment__controls a.date').text.strip.parse_date,
+              type = 'answer_comment'
           )
     end
     answers_comments
@@ -71,5 +74,4 @@ class QuestionPage
     date = @page.css('div.date')[0]['content'][0..9]+' '+@page.css('div.date')[0].text[-5..-1]
     date.parse_date
   end
-
 end

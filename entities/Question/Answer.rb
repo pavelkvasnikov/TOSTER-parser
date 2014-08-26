@@ -1,8 +1,8 @@
 class Answer
-  attr_reader :author, :descr, :likes, :comments, :created_at, :is_accepted
+  attr_reader :user, :descr, :likes, :comments, :created_at, :is_accepted
 
-  def initialize(author, descr, likes, comments, created_at, is_accepted)
-    @author = author
+  def initialize(user, descr, likes, comments, created_at, is_accepted)
+    @user = user
     @descr = descr
     @likes = likes
     @comments= comments

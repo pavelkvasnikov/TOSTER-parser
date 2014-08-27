@@ -30,7 +30,7 @@ class QuestionPage
         views = @page.css('div.views')[0].text,
         comments_count = @page.css('a.add_clarification_link').text.strip.match(/[0-9]+/) || 0,
         tags = tags,
-        comments = comments
+        comments = get_question_comments
     )
   end
 
@@ -57,6 +57,20 @@ class QuestionPage
   end
 
   private
+  def get_question_comments
+    question_comments = []
+    @page.css('li.clarifications_list_item').each do |c|
+      question_comments <<
+          Comment.new(
+              c.css('div.comment__body div.comment__header div.comment__meta a.comment__username').text,
+              c.css('div.comment__body div.comment__text').text,
+              c.css('div.comment__body div.comment__header div.comment__controls a.date').text.parse_date,
+              type = 'question_comment'
+          )
+    end
+    question_comments
+  end
+
   def get_comments(answer)
     answers_comments = []
     answer.css('div.answer__body div.answer__feedback div div ul li').each do |c|

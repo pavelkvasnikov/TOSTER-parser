@@ -43,14 +43,18 @@ class String
   end
 end
 
-# user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
-# cookie = 'toster_sid=2uk03e20bfupr4e3ce0355mqj5; _ga=GA1.2.1678308696.1403085862; _dc=1; _ym_visorc_24049246=b'
+ user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+ cookie = 'toster_sid=2uk03e20bfupr4e3ce0355mqj5; _ga=GA1.2.1678308696.1403085862; _dc=1; _ym_visorc_24049246=b'
 # urls = QuestionPageList.get_questions_ids(user_agent,cookie)
 
-exit 0
-urls.each do |q|
- puts  QuestionPage.new(q,user_agent,cookie).get_question.created_at.to_s
+
+QuestionPage.new(123539,user_agent,cookie).get_question.comments.each do |c|
+  puts c.descr
+  puts c.user
+  puts c.type
+  puts c.created_at.to_s
 end
+
 exit 0
 question,answers = QuestionPage.new(121463,user_agent,cookie).get_all
 

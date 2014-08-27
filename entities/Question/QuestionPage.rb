@@ -50,10 +50,7 @@ class QuestionPage
   end
 
   def get_all
-
     question = get_question,answers= get_answers
-
-
   end
 
   private
@@ -84,6 +81,7 @@ class QuestionPage
     end
     answers_comments
   end
+
   def get_question_date
     date = @page.css('div.date')[0]['content'][0..9]+' '+@page.css('div.date')[0].text[-5..-1]
     date.parse_date

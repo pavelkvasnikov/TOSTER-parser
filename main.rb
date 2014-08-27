@@ -48,15 +48,16 @@ end
 # urls = QuestionPageList.get_questions_ids(user_agent,cookie)
 
 
-QuestionPage.new(123539,user_agent,cookie).get_question.comments.each do |c|
+QuestionPage.new(95401,user_agent,cookie).get_question.comments.each do |c|
   puts c.descr
   puts c.user
   puts c.type
   puts c.created_at.to_s
+  puts '---------------------'
 end
 
 exit 0
-question,answers = QuestionPage.new(121463,user_agent,cookie).get_all
+question,answers = QuestionPage.new(95401,user_agent,cookie).get_all
 
 puts 'QUESTION DATE = '+question.created_at.to_s
 

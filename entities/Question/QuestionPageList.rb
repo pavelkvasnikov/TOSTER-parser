@@ -6,7 +6,7 @@ class QuestionPageList
 
   def self.get_questions_ids(user_agent=nil, cookie=nil)
     urls_list = []
-    940.upto(Float::INFINITY) do |page_number|
+    1.upto(Float::INFINITY) do |page_number|
       begin
         page = Nokogiri::HTML(open("http://toster.ru/my/feed_latest?page=#{page_number}", {'User-Agent' => user_agent||'', 'Cookie' => cookie||''}))
         page.css('div.info div.title a').each { |t| urls_list<< t.attr('href')[/[0-9]+/] }

@@ -47,7 +47,10 @@ end
 user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
 cookie = 'toster_sid=r26mseclr84odkh2acrn9vg5u0; _gat=1; _ga=GA1.2.1258715546.1408355028; _ym_visorc_24049246=b'
 urls = QuestionPageList.get_questions_ids(user_agent, cookie)
-urls.each do |q|
+puts "Parsed #{urls.count} questions"
+
+urls.each_with_index  do |q,index|
+  print("Inserting #{index} of #{urls.count} question           \r")
   question, answers = QuestionPage.new(q, user_agent, cookie).get_all
   user_q = Tables::User.find_or_create(:nick => question.user.nick) { |user|
     user.questions= question.user.questions
@@ -123,7 +126,7 @@ urls.each do |q|
       )
     end
   end
-
-
+  print("Successfully inserted #{index}  question           \r")
 end
 
+puts('Everything is OK')

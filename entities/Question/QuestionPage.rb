@@ -2,6 +2,7 @@
 require_relative 'Question'
 require_relative 'Answer'
 require_relative 'Comment'
+require_relative '../../entities/User/user'
 
 class QuestionPage
   @questions_url = 'http://toster.ru/q/'
@@ -26,7 +27,7 @@ class QuestionPage
         descr = @page.css('div[itemprop="articleBody"]').text,
         likes = @page.css('div.question_interest_link_float_container span').text.strip,
         created_at = get_question_date,
-        user = @page.css('a[itemprop="name"]').text,
+        user = get_user(@page.css('a[itemprop="name"]').text),
         views = @page.css('div.views')[0].text,
         comments_count = @page.css('a.add_clarification_link').text.strip.match(/[0-9]+/) || 0,
         tags = tags,
@@ -54,6 +55,17 @@ class QuestionPage
   end
 
   private
+  def get_user(login)
+    @user_page = Nokogiri::HTML(open('http://toster.ru/user/'+login.to_s, {'User-Agent' => @user_agent||'', 'Cookie' => @cookie||''}))
+    User.new(
+        nick      =  login,
+        rating    =  @user_page.css('div.meta div.rating b').text,
+        answers   =  @user_page.css('div.meta div.answers_count a b').text,
+        questions =  @user_page.css('div.meta div.questions_count a b')[0].text,
+        name      =  @user_page.css('div.fullname a').text
+    )
+  end
+
   def get_question_comments
     question_comments = []
     @page.css('li.clarifications_list_item').each do |c|

@@ -48,13 +48,10 @@ end
 # urls = QuestionPageList.get_questions_ids(user_agent,cookie)
 
 
-QuestionPage.new(95401,user_agent,cookie).get_question.comments.each do |c|
-  puts c.descr
-  puts c.user
-  puts c.type
-  puts c.created_at.to_s
-  puts '---------------------'
-end
+qq = QuestionPage.new(95401,user_agent,cookie).get_question.user
+  puts qq.nick
+  puts qq.rating
+
 
 exit 0
 question,answers = QuestionPage.new(95401,user_agent,cookie).get_all

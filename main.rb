@@ -88,7 +88,7 @@ urls.each do |q|
     tags_id << tag__.id
   end
   tags_id.each do |tag_id|
-    Tables::QuestionsTag.insert(nil, :tag_id => tag_id, :question_id => Tables::Question.last.id)
+    Tables::QuestionsTag.insert(:id => nil, :tag_id => tag_id, :question_id => Tables::Question.last.id)
   end
   answers.each do |answer|
     user_a = Tables::User.find_or_create(:nick => answer.user.nick) { |user|

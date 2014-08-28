@@ -25,11 +25,11 @@ class QuestionPage
     Question.new(
         title = @page.css('span[itemprop="name"]').text,
         descr = @page.css('div[itemprop="articleBody"]').text,
-        likes = @page.css('div.question_interest_link_float_container span').text.strip,
+        likes = @page.css('div.question_interest_link_float_container span').text.strip.to_i,
         created_at = get_question_date,
         user = get_user(@page.css('a[itemprop="name"]').text),
         views = @page.css('div.views')[0].text,
-        comments_count = @page.css('a.add_clarification_link').text.strip.match(/[0-9]+/) || 0,
+        comments_count = @page.css('a.add_clarification_link').text.strip.match(/[0-9]+/).to_s.to_i || 0,
         tags = tags,
         comments = get_question_comments
     )
@@ -41,10 +41,10 @@ class QuestionPage
       answers << Answer.new(
           get_user(answer.css('div.answer__body div.answer__header div.answer__meta a').text),
           answer.css('div.answer__body div.answer__text').text,
-          answer.css('div.answer__body div.answer__feedback a strong').text.strip.match(/[0-9]+/) || 0,
+          answer.css('div.answer__body div.answer__feedback a strong').text.strip.match(/[0-9]+/).to_s.to_i || 0,
           get_comments(answer),
           answer.css('div.answer__controls a.date').text.strip.parse_date,
-          answer.css('div.answer__body div.answer__header div.answer__meta span.answer__approve span.answer__solution').text || ''
+          answer.css('div.answer__body div.answer__header div.answer__meta span.answer__approve span.answer__solution').text || 'false'
       )
     end
     answers
@@ -71,7 +71,7 @@ class QuestionPage
     @page.css('li.clarifications_list_item').each do |c|
       question_comments <<
           Comment.new(
-              c.css('div.comment__body div.comment__header div.comment__meta a.comment__username').text,
+              get_user(c.css('div.comment__body div.comment__header div.comment__meta a.comment__username').text),
               c.css('div.comment__body div.comment__text').text,
               c.css('div.comment__body div.comment__header div.comment__controls a.date').text.parse_date,
               type = 'question_comment'

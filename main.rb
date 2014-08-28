@@ -10,15 +10,15 @@ class String
   def parse_date
     # Full date time format <DD.MM.YYYY, в hh:mm>, 'в' is russian letter
     if self.match(/[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9][0-9],.+/)
-      return Time.new(self[6..9],self[3..4],self[0..1],self[-5..-4],self[-2..-1])
+      return Time.new(self[6..9], self[3..4], self[0..1], self[-5..-4], self[-2..-1])
     end
     # Partial date format <DD.MM, в hh:mm>, like previous but without year, 'в' is russian letter
     if self.match(/[0-9][0-9]\.[0-9][0-9],.+/)
-      return Time.new(Time.now.year,  self[3..4], self[0..1],self[-5..-4],self[-2..-1])
+      return Time.new(Time.now.year, self[3..4], self[0..1], self[-5..-4], self[-2..-1])
     end
     # Question date mix from content attribute and pure text
     if self.match(/[0-9][0-9][0-9][0-9].+/)
-      return Time.new(self[0..3],self[5..6],self[8..9], self[11..12], self[14..15])
+      return Time.new(self[0..3], self[5..6], self[8..9], self[11..12], self[14..15])
     end
     # Some hours ago
     if self.match(/[0-9]+ час.+/)
@@ -33,7 +33,7 @@ class String
       return Time.now - 60*60
     end
     # A minute ago
-    if self=='минуту назад'#
+    if self=='минуту назад' #
       return Time.now - 60
     end
     if self=='вчера'
@@ -43,38 +43,87 @@ class String
   end
 end
 
- user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
- cookie = 'toster_sid=2uk03e20bfupr4e3ce0355mqj5; _ga=GA1.2.1678308696.1403085862; _dc=1; _ym_visorc_24049246=b'
-# urls = QuestionPageList.get_questions_ids(user_agent,cookie)
 
+user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
+cookie = 'toster_sid=r26mseclr84odkh2acrn9vg5u0; _gat=1; _ga=GA1.2.1258715546.1408355028; _ym_visorc_24049246=b'
+urls = QuestionPageList.get_questions_ids(user_agent, cookie)
+urls.each do |q|
+  question, answers = QuestionPage.new(q, user_agent, cookie).get_all
+  user_q = Tables::User.find_or_create(:nick => question.user.nick) { |user|
+    user.questions= question.user.questions
+    user.answers=question.user.answers
+    user.rating= question.user.rating
+    user.name= question.user.name
+  }
 
-qq = QuestionPage.new(95401,user_agent,cookie).get_question.user
-  puts qq.nick
-  puts qq.rating
-
-
-exit 0
-question,answers = QuestionPage.new(95401,user_agent,cookie).get_all
-
-puts 'QUESTION DATE = '+question.created_at.to_s
-
-puts
-
-answers.each do |answer|
-  puts '    ANSWER DATE = '+answer.created_at.to_s
-  puts
-  answer.comments.each do |comment|
-       puts '        COMMENT DATE = ' + comment.created_at.to_s
-       puts
+  Tables::Question.insert(
+      :id => nil,
+      :descr => question.descr,
+      :user_id => user_q.id,
+      :views => question.views,
+      :created_at => question.created_at,
+      :likes => question.likes,
+      :title => question.title,
+      :comments_count => question.comments_count
+  )
+  question.comments.each do |comment|
+    user_c = Tables::User.find_or_create(:nick => comment.user.nick) { |user|
+      user.questions= question.user.questions
+      user.answers=question.user.answers
+      user.rating= question.user.rating
+      user.name= question.user.name
+    }
+    Tables::Comment.insert(
+        :id => nil,
+        :descr => comment.descr,
+        :user_id => user_c.id,
+        :created_at => comment.created_at,
+        :resource_id => Tables::Question.last.id,
+        :type => 'question'
+    )
+  end
+  tags_id =[]
+  question.tags.each do |tag|
+    tag__ = Tables::Tag.find_or_create(:tag => tag) { |tag_| tag_.tag=tag }
+    tags_id << tag__.id
+  end
+  tags_id.each do |tag_id|
+    Tables::QuestionsTag.insert(nil, :tag_id => tag_id, :question_id => Tables::Question.last.id)
+  end
+  answers.each do |answer|
+    user_a = Tables::User.find_or_create(:nick => answer.user.nick) { |user|
+      user.questions= question.user.questions
+      user.answers=question.user.answers
+      user.rating= question.user.rating
+      user.name= question.user.name
+    }
+    Tables::Answer.insert(
+        :id => nil,
+        :descr => answer.descr,
+        :likes => answer.likes,
+        :user_id => user_a.id,
+        :is_accepted => answer.is_accepted,
+        :created_at => answer.created_at,
+        :question_id => Tables::Question.last.id
+    )
+    answer.comments.each do |comment|
+      user_c = Tables::User.find_or_create(:nick => comment.user.nick) { |user|
+        user.questions= question.user.questions
+        user.answers=question.user.answers
+        user.rating= question.user.rating
+        user.name= question.user.name
+      }
+      Tables::Comment.insert(
+          :id => nil,
+          :descr => comment.descr,
+          :user_id => user_c.id,
+          :created_at => comment.created_at,
+          :type => 'answer',
+          :resource_id => Tables::Answer.last.id
+      )
     end
+  end
+
+
 end
-
-
-exit 0
-page = Nokogiri::HTML(open('http://toster.ru/my/feed_latest?page=16', {'User-Agent' => user_agent||'', 'Cookie' => cookie||''}))
-
-# page = Nokogiri::HTML(open('http://toster.ru/q/118059', {'User-Agent' => user_agent||'', 'Cookie' => cookie||''}) )
-# tags =[]
-
-
 

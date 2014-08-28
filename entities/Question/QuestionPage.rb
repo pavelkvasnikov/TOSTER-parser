@@ -39,7 +39,7 @@ class QuestionPage
     answers = []
     @page.css('li.answers_list_item').each do |answer|
       answers << Answer.new(
-          answer.css('div.answer__body div.answer__header div.answer__meta a').text,
+          get_user(answer.css('div.answer__body div.answer__header div.answer__meta a').text),
           answer.css('div.answer__body div.answer__text').text,
           answer.css('div.answer__body div.answer__feedback a strong').text.strip.match(/[0-9]+/) || 0,
           get_comments(answer),
@@ -85,7 +85,7 @@ class QuestionPage
     answer.css('div.answer__body div.answer__feedback div div ul li').each do |c|
       answers_comments<<
           Comment.new(
-              c.css('div.comment__body div.comment__header div.comment__meta a.comment__username').text,
+              get_user(c.css('div.comment__body div.comment__header div.comment__meta a.comment__username').text),
               c.css('div.comment__body div.comment__text').text,
               c.css('div.comment__body div.comment__header div.comment__controls a.date').text.strip.parse_date,
               type = 'answer_comment'

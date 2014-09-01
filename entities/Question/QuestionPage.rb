@@ -26,7 +26,7 @@ class QuestionPage
         title = @page.css('span[itemprop="name"]').text,
         descr = @page.css('div[itemprop="articleBody"]').text,
         likes = @page.css('div.question_interest_link_float_container span').text.strip.to_i,
-        created_at = get_question_date,
+        created_at = @page.css('div.date')[0].text.parse_date,
         user = get_user(@page.css('a[itemprop="name"]').text),
         views = @page.css('div.views')[0].text,
         comments_count = @page.css('a.add_clarification_link').text.strip.match(/[0-9]+/).to_s.to_i || 0,
@@ -59,8 +59,8 @@ class QuestionPage
     @user_page = Nokogiri::HTML(open('http://toster.ru/user/'+login.to_s, {'User-Agent' => @user_agent||'', 'Cookie' => @cookie||''}))
     User.new(
         nick      =  login,
-        rating    =  @user_page.css('div.meta div.rating b').text,
-        answers   =  @user_page.css('div.meta div.answers_count a b').text,
+        rating    =  @user_page.css('div.meta div.rating b')[0].text,
+        answers   =  @user_page.css('div.meta div.answers_count a b')[0].text,
         questions =  @user_page.css('div.meta div.questions_count a b')[0].text,
         name      =  @user_page.css('div.fullname a').text
     )

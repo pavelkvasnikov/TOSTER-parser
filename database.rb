@@ -7,7 +7,7 @@ class DatabaseConnector
   class << self
     attr_accessor :data_source
   end
-  @data_source = 'mysql2://root@localhost/testparser'
+  @data_source = 'sqlite://tosternew'
   db = Sequel.connect(DatabaseConnector.data_source)
   tables = %w(answers comments questions tags questions_tags users )
   tables.each do |table|

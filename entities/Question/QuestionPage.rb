@@ -2,7 +2,7 @@
 require_relative 'Question'
 require_relative 'Answer'
 require_relative 'Comment'
-require_relative '../../entities/User/user'
+require_relative 'User'
 
 class QuestionPage
   @questions_url = 'http://toster.ru/q/'

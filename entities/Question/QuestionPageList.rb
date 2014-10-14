@@ -5,21 +5,9 @@ class QuestionPageList
   end
 
   def self.get_questions_ids(user_agent=nil, cookie=nil)
-    urls_list = []
-    1.upto(Float::INFINITY) do |page_number|
-      begin
-        page = Nokogiri::HTML(open("http://toster.ru/my/feed_latest?page=#{page_number}", {'User-Agent' => user_agent||'', 'Cookie' => cookie||''}))
-        page.css('div.info div.title a').each { |t| urls_list<< t.attr('href')[/[0-9]+/] }
-        print "parsing paginator page #{page_number}  of ~1000      \r"
-      rescue OpenURI::HTTPError => exception
-        if exception.message=='404 Not Found'
-          print "parsing paginator pages DONE     \n"
-          return urls_list
-        else
-          raise OpenURI::HTTPError.new(exception, nil)
-        end
-      end
-    end
+    page = Nokogiri::HTML(open("http://toster.ru", {'User-Agent' => user_agent||'', 'Cookie' => cookie||''}))
+    (1..page.css('body > div > div.content.with_sidebar > div.main_content > div.left_column > div > div.questions_list.shortcuts_items > div:nth-child(1) > div.info > div.title > a')[0].attr('href')[/[0-9]+/].to_i).to_a
+
   end
 end
 

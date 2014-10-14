@@ -1,13 +1,17 @@
+print "initializing...\r"
 require 'nokogiri'
 require 'sequel'
 require 'open-uri'
+require 'parallel'
 require_relative 'database'
 require_relative 'entities/Question/QuestionPage'
 require_relative 'entities/Question/QuestionPageList'
 require_relative 'String'
+print "initializing... DONE\r"
 
-user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36'
-cookie = 'toster_sid=r26mseclr84odkh2acrn9vg5u0; _gat=1; _ga=GA1.2.1258715546.1408355028; _ym_visorc_24049246=b'
+
+user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36'
+cookie = 'toster_sid=82bmv6utfl49hra0t5fmooelh5; _gat=1; _ga=GA1.2.1678308696.1403085862; _ym_visorc_24049246=b'
 #urls = [123539,125458,125460,125461]
 
 # urls.each do |q|
@@ -22,16 +26,26 @@ cookie = 'toster_sid=r26mseclr84odkh2acrn9vg5u0; _gat=1; _ga=GA1.2.1258715546.14
 #   end
 # end
 
-urls = QuestionPageList.get_questions_ids(user_agent, cookie)
+log_file = File.open('logs','w')
 
+urls = QuestionPageList.get_questions_ids()
+mutex = Mutex.new
 puts "Parsed #{urls.count} questions"
 
-urls.each_with_index  do |q,index|
+Parallel.each_with_index(urls,:in_threads => 32)  do |q,index|
   print("Inserting #{index} of #{urls.count} question           \r")
   begin
   question, answers = QuestionPage.new(q, user_agent, cookie).get_all
   rescue OpenURI::HTTPError => exception
+    log_file.puts "index = #{index}, exception text = #{exception}  , q = #{q}"
     next
+  rescue Errno::ECONNREFUSED => exception_
+    log_file.puts "index = #{index}, exception text = #{exception_} , q = #{q}"
+    next
+  rescue Errno::ETIMEDOUT => exception__
+    log_file.puts "index = #{index}, exception text = #{exception__}, q = #{q}"
+    sleep 6
+    retry
   end
   user_q = Tables::User.find_or_create(:nick => question.user.nick) { |user|
     user.questions = question.user.questions
@@ -108,5 +122,5 @@ urls.each_with_index  do |q,index|
     end
   end
 end
-
+f.close
 puts('Everything is OK')

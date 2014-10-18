@@ -11,41 +11,29 @@ print "initializing... DONE\r"
 
 
 user_agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36'
-cookie = 'toster_sid=82bmv6utfl49hra0t5fmooelh5; _gat=1; _ga=GA1.2.1678308696.1403085862; _ym_visorc_24049246=b'
-#urls = [123539,125458,125460,125461]
+cookie = 'toster_sid=8898hi0bim08pru0kav85iq745; _gat=1; _ga=GA1.2.674143056.1413212318; _ym_visorc_24049246=b'
 
-# urls.each do |q|
-#
-#   QuestionPage.new(q,user_agent,cookie).get_answers.each do |answer|
-#     puts "ANSWER USER :  nick = #{answer.user.nick}, rating = #{answer.user.rating}, answers = #{answer.user.answers} "
-#     puts "ANSWER DATE = #{answer.created_at.to_s}"
-#     answer.comments.each do |c|
-#       puts "     COMMENT USER nick = #{c.user.nick}, rating = #{c.user.rating}, answers = #{c.user.answers} "
-#       puts "     COMMENT DATE = #{c.created_at.to_s}"
-#     end
-#   end
-# end
 
-log_file = File.open('logs','w')
+log_file = File.open('logs','a')
 
-urls = QuestionPageList.get_questions_ids()
-mutex = Mutex.new
+urls = QuestionPageList.get_questions_ids
+
 puts "Parsed #{urls.count} questions"
 
-Parallel.each_with_index(urls,:in_threads => 32)  do |q,index|
+Parallel.each_with_index(urls,:in_threads => 4)  do |q,index|
+  next unless Tables::Question.where(:link_id => q).nil?
   print("Inserting #{index} of #{urls.count} question           \r")
   begin
-  question, answers = QuestionPage.new(q, user_agent, cookie).get_all
+  question, answers = QuestionPage.new(q,user_agent,cookie).get_all
   rescue OpenURI::HTTPError => exception
-    log_file.puts "index = #{index}, exception text = #{exception}  , q = #{q}"
+    log_file.print "index = #{index}, exception text = #{exception}  , q = #{q} \n"
     next
   rescue Errno::ECONNREFUSED => exception_
-    log_file.puts "index = #{index}, exception text = #{exception_} , q = #{q}"
+    log_file.print "index = #{index}, exception text = #{exception_} , q = #{q} \n"
     next
   rescue Errno::ETIMEDOUT => exception__
-    log_file.puts "index = #{index}, exception text = #{exception__}, q = #{q}"
-    sleep 6
-    retry
+    log_file.print "index = #{index}, exception text = #{exception__}, q = #{q} \n"
+    next
   end
   user_q = Tables::User.find_or_create(:nick => question.user.nick) { |user|
     user.questions = question.user.questions
@@ -62,7 +50,8 @@ Parallel.each_with_index(urls,:in_threads => 32)  do |q,index|
       :created_at     => question.created_at,
       :likes          => question.likes,
       :title          => question.title,
-      :comments_count => question.comments_count
+      :comments_count => question.comments_count,
+      :link_id        => q
   )
   question.comments.each do |comment|
     user_c = Tables::User.find_or_create(:nick => comment.user.nick) { |user|
@@ -122,5 +111,5 @@ Parallel.each_with_index(urls,:in_threads => 32)  do |q,index|
     end
   end
 end
-f.close
+log_file.close
 puts('Everything is OK')

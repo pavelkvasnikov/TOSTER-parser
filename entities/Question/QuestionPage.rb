@@ -21,7 +21,7 @@ class QuestionPage
   def get_question
     tags=[]
     comments = []
-    @page.css('div.question_show div.info div.tags div.tag a[itemprop=articleSection]').each { |t| tags<<t.text }
+    @page.css('div.question_show div.info div.tags div.tag a[itemprop=articleSection]').each { |t| tags<<t.text.strip }
     Question.new(
         title = @page.css('span[itemprop="name"]').text,
         descr = @page.css('div[itemprop="articleBody"]').text,
@@ -41,7 +41,7 @@ class QuestionPage
       answers << Answer.new(
           get_user(answer.css('div.answer__body div.answer__header div.answer__meta a').text),
           answer.css('div.answer__body div.answer__text').text,
-          answer.css('div.answer__body div.answer__feedback a strong').text.strip.match(/[0-9]+/).to_s.to_i || 0,
+          answer.css('div.answer__body div.answer__feedback > a:first-child  > strong').text.strip.match(/[0-9]+/).to_s.to_i || 0,
           get_comments(answer),
           answer.css('div.answer__controls a.date').text.strip.parse_date,
           answer.css('div.answer__body div.answer__header div.answer__meta span.answer__approve span.answer__solution').text || 'false'
